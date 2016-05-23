@@ -1,12 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10112" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qLB-Kz-cUt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10112" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Segue View Controller-->
+        <scene sceneID="kRZ-qI-xFx">
+            <objects>
+                <viewController id="b0F-lk-mJU" customClass="SegueViewController" customModule="Hw10" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yTL-Tt-IdF"/>
+                        <viewControllerLayoutGuide type="bottom" id="fnA-ie-saM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N1g-nK-dLe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Feg-nG-XgQ">
+                                <rect key="frame" x="44" y="106" width="165" height="30"/>
+                                <color key="backgroundColor" red="0.57597464323043823" green="0.91901689767837524" blue="0.90427029132843018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="三上悠亞"/>
+                                <connections>
+                                    <action selector="avBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgL-dT-BDb"/>
+                                    <segue destination="dJ2-bh-H7p" kind="presentation" identifier="showgirl1" id="dTa-Dv-EhQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAY-O3-fL3">
+                                <rect key="frame" x="44" y="158" width="165" height="30"/>
+                                <color key="backgroundColor" red="0.57597464323043823" green="0.91901689767837524" blue="0.90427029132843018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="范冰冰"/>
+                                <connections>
+                                    <action selector="tvBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eU7-FM-1RU"/>
+                                    <segue destination="dJ2-bh-H7p" kind="presentation" identifier="showgirl2" id="qbe-Fa-63c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B56-rs-KIy">
+                                <rect key="frame" x="44" y="214" width="165" height="30"/>
+                                <color key="backgroundColor" red="0.57597464323043823" green="0.91901689767837524" blue="0.90427029132843018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Scarlett Johansson"/>
+                                <connections>
+                                    <action selector="movieBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TJN-wf-qUI"/>
+                                    <segue destination="dJ2-bh-H7p" kind="presentation" identifier="showgirl3" id="mij-b8-9dN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eoo-44-fzS">
+                                <rect key="frame" x="90" y="293" width="46" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="back:" destination="b0F-lk-mJU" eventType="touchUpInside" id="bM6-se-3qK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="avBut" destination="Feg-nG-XgQ" id="fSc-Dv-jz0"/>
+                        <outlet property="movieBut" destination="B56-rs-KIy" id="3bb-e7-WgN"/>
+                        <outlet property="tvBut" destination="AAY-O3-fL3" id="Ori-94-7QR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azT-Qc-2cS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361" y="-472"/>
+        </scene>
         <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -20,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kau-O7-0bZ">
-                                <rect key="frame" x="39" y="99" width="68" height="30"/>
+                                <rect key="frame" x="39" y="99" width="185" height="30"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="三上悠亞"/>
                                 <connections>
@@ -28,7 +85,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezJ-TG-tsr">
-                                <rect key="frame" x="39" y="151" width="68" height="30"/>
+                                <rect key="frame" x="39" y="151" width="185" height="30"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="范冰冰"/>
                                 <connections>
@@ -36,11 +93,33 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fys-qr-cKj">
-                                <rect key="frame" x="39" y="207" width="147" height="30"/>
+                                <rect key="frame" x="39" y="207" width="185" height="30"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Scarlett Johansson"/>
                                 <connections>
                                     <action selector="movieBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lOt-OF-yWU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scE-Be-KKx">
+                                <rect key="frame" x="39" y="297" width="62" height="30"/>
+                                <state key="normal" title="Segue"/>
+                                <connections>
+                                    <segue destination="b0F-lk-mJU" kind="show" id="568-ZB-UqG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bz3-MB-1JJ">
+                                <rect key="frame" x="47" y="417" width="139" height="30"/>
+                                <state key="normal" title="Storyboard呼叫下頁"/>
+                                <connections>
+                                    <action selector="showSleepRabbit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G5E-GA-a7k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAn-pB-qWq">
+                                <rect key="frame" x="47" y="455" width="139" height="30"/>
+                                <state key="normal" title="Segue呼叫下頁"/>
+                                <connections>
+                                    <action selector="showMoney:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hde-Ir-IAS"/>
+                                    <action selector="showSleepRabbit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bUd-nR-kLo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,10 +128,77 @@
                     <navigationItem key="navigationItem" id="LRT-2X-o2r">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="5yy-xV-bBd"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="avBut" destination="kau-O7-0bZ" id="p1W-kG-Uom"/>
+                        <outlet property="movieBut" destination="fys-qr-cKj" id="Ao5-pP-6Vz"/>
+                        <outlet property="tvBut" destination="ezJ-TG-tsr" id="FHA-eZ-O8c"/>
+                        <segue destination="Otb-xP-ixG" kind="presentation" identifier="showmoney" id="yQX-2c-Qpl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957" y="239"/>
+            <point key="canvasLocation" x="1011" y="239"/>
+        </scene>
+        <!--Money View Controller-->
+        <scene sceneID="aIT-fL-l1j">
+            <objects>
+                <viewController id="Otb-xP-ixG" customClass="MoneyViewController" customModule="Hw10" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HeA-m7-Zrr"/>
+                        <viewControllerLayoutGuide type="bottom" id="W8Q-8P-zgp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tvs-lu-dU2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money" translatesAutoresizingMaskIntoConstraints="NO" id="eej-hu-u7x">
+                                <rect key="frame" x="40" y="70" width="81" height="73"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhV-Of-UrR">
+                                <rect key="frame" x="63" y="163" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBut:" destination="fF0-zk-tBD" eventType="touchUpInside" id="KSD-iV-gkB"/>
+                                    <action selector="backbut:" destination="Otb-xP-ixG" eventType="touchUpInside" id="bIt-GF-Luk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0j-25-Wg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256" y="1010"/>
+        </scene>
+        <!--Rabbit View Controller-->
+        <scene sceneID="av2-9h-UML">
+            <objects>
+                <viewController storyboardIdentifier="RabbitController" id="fF0-zk-tBD" customClass="RabbitViewController" customModule="Hw10" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1EM-v8-GJ1"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Kb-QF-cYf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DzL-xK-hHE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rabbit" translatesAutoresizingMaskIntoConstraints="NO" id="9jv-Ao-fJ9">
+                                <rect key="frame" x="56" y="75" width="81" height="73"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3Z-WZ-uXH">
+                                <rect key="frame" x="79" y="177" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBut:" destination="fF0-zk-tBD" eventType="touchUpInside" id="Vie-iL-GmS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDw-Y8-i9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="1015"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="o2N-9u-Td0">
@@ -63,22 +209,19 @@
                         <viewControllerLayoutGuide type="bottom" id="RTJ-IS-oMO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BY4-CM-3DJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d88-jN-TVZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d88-jN-TVZ">
                                 <rect key="frame" x="20" y="79" width="300" height="307"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="CAp-x2-gkd"/>
-                                    <constraint firstAttribute="width" constant="300" id="dOV-1R-kjJ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="ics-ku-C5X"/>
-                                    <constraint firstAttribute="width" secondItem="d88-jN-TVZ" secondAttribute="height" multiplier="3:2" id="j9w-AT-Fpy"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="yqT-oc-Y69"/>
-                                    <constraint firstAttribute="width" secondItem="d88-jN-TVZ" secondAttribute="height" multiplier="3:2" id="yxV-QX-YMC"/>
-                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLF-hp-qlp">
-                                <rect key="frame" x="147" y="518" width="46" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oTn-XD-m3B">
+                                <rect key="frame" x="20" y="409" width="157" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLF-hp-qlp">
+                                <rect key="frame" x="198" y="409" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="BACK"/>
                                 <connections>
@@ -87,69 +230,70 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="d88-jN-TVZ" firstAttribute="leading" secondItem="BY4-CM-3DJ" secondAttribute="leadingMargin" constant="5" id="0xL-um-5WR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="d88-jN-TVZ" secondAttribute="trailing" constant="10" id="Smh-sh-KaI"/>
-                            <constraint firstItem="QLF-hp-qlp" firstAttribute="top" secondItem="d88-jN-TVZ" secondAttribute="bottom" constant="40" id="UpV-6S-xJ8"/>
-                            <constraint firstItem="d88-jN-TVZ" firstAttribute="top" secondItem="Vds-da-vDT" secondAttribute="bottom" constant="59" id="bNx-2B-L6H"/>
-                            <constraint firstItem="QLF-hp-qlp" firstAttribute="centerX" secondItem="BY4-CM-3DJ" secondAttribute="centerX" id="iXE-6l-Z9A"/>
-                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="imageView" destination="d88-jN-TVZ" id="Ps5-lR-TgT"/>
+                        <outlet property="textField" destination="oTn-XD-m3B" id="Z80-sY-iFJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VkP-Co-SRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="239"/>
+            <point key="canvasLocation" x="1798" y="397"/>
         </scene>
-        <!--Edit View Controller-->
-        <scene sceneID="Q2h-F3-2re">
+        <!--Info View2 Controller-->
+        <scene sceneID="Vad-4p-ScO">
             <objects>
-                <viewController id="pXm-wl-wUO" customClass="EditViewController" customModule="Hw10" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoView2" id="ndt-cF-sql" customClass="InfoView2Controller" customModule="Hw10" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wmI-g7-w0R"/>
-                        <viewControllerLayoutGuide type="bottom" id="mAp-Sp-XWZ"/>
+                        <viewControllerLayoutGuide type="top" id="mgP-Ok-6Ic"/>
+                        <viewControllerLayoutGuide type="bottom" id="7nZ-Jc-4Bq"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="unf-QP-Va3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="atq-YQ-2F3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iEr-EW-Ecs">
-                                <rect key="frame" x="74" y="84" width="200" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hv-Ok-98F">
+                                <rect key="frame" x="20" y="65" width="288" height="235"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info View 2 Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhM-fG-NEO">
+                                <rect key="frame" x="20" y="36" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ch0-aR-446">
+                                <rect key="frame" x="20" y="308" width="196" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7YM-hH-dLp">
-                                <rect key="frame" x="74" y="129" width="200" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6c-qC-79D">
+                                <rect key="frame" x="234" y="308" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBut:" destination="ndt-cF-sql" eventType="touchUpInside" id="TA8-9I-NO2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9cR-J6-c7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2321" y="239"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="CMc-f5-l0p">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qLB-Kz-cUt" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zll-b2-vB4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uKE-1l-j3Q"/>
+                        <outlet property="imageView" destination="1hv-Ok-98F" id="q23-tc-esJ"/>
+                        <outlet property="textField" destination="ch0-aR-446" id="gnH-sB-dbd"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oqf-hb-k1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPW-GF-jlo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="274" y="239"/>
+            <point key="canvasLocation" x="2084" y="1233"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="money" width="64" height="64"/>
+        <image name="rabbit" width="64" height="64"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mij-b8-9dN"/>
+    </inferredMetricsTieBreakers>
 </document>

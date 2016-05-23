@@ -14,7 +14,10 @@
 		B0432A521CEB55FE00C260BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0432A501CEB55FE00C260BD /* LaunchScreen.storyboard */; };
 		B0432A5A1CEB578100C260BD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0432A591CEB578100C260BD /* FirstViewController.swift */; };
 		B0432A5C1CEB579000C260BD /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0432A5B1CEB579000C260BD /* InfoViewController.swift */; };
-		B0432A5E1CEB57A200C260BD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0432A5D1CEB57A200C260BD /* EditViewController.swift */; };
+		B0685DBA1CEEB259000291E3 /* SegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0685DB91CEEB259000291E3 /* SegueViewController.swift */; };
+		B0685DBE1CEEE0C1000291E3 /* RabbitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0685DBD1CEEE0C1000291E3 /* RabbitViewController.swift */; };
+		B0685DC01CEEE481000291E3 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0685DBF1CEEE481000291E3 /* MoneyViewController.swift */; };
+		B0685DC21CF2DA6E000291E3 /* InfoView2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0685DC11CF2DA6E000291E3 /* InfoView2Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +30,10 @@
 		B0432A531CEB55FE00C260BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0432A591CEB578100C260BD /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		B0432A5B1CEB579000C260BD /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		B0432A5D1CEB57A200C260BD /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		B0685DB91CEEB259000291E3 /* SegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
+		B0685DBD1CEEE0C1000291E3 /* RabbitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RabbitViewController.swift; sourceTree = "<group>"; };
+		B0685DBF1CEEE481000291E3 /* MoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
+		B0685DC11CF2DA6E000291E3 /* InfoView2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView2Controller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +69,12 @@
 				B0432A471CEB55FE00C260BD /* AppDelegate.swift */,
 				B0432A491CEB55FE00C260BD /* ViewController.swift */,
 				B0432A4B1CEB55FE00C260BD /* Main.storyboard */,
+				B0685DC11CF2DA6E000291E3 /* InfoView2Controller.swift */,
+				B0685DBF1CEEE481000291E3 /* MoneyViewController.swift */,
+				B0685DBD1CEEE0C1000291E3 /* RabbitViewController.swift */,
+				B0685DB91CEEB259000291E3 /* SegueViewController.swift */,
 				B0432A591CEB578100C260BD /* FirstViewController.swift */,
 				B0432A5B1CEB579000C260BD /* InfoViewController.swift */,
-				B0432A5D1CEB57A200C260BD /* EditViewController.swift */,
 				B0432A4E1CEB55FE00C260BD /* Assets.xcassets */,
 				B0432A501CEB55FE00C260BD /* LaunchScreen.storyboard */,
 				B0432A531CEB55FE00C260BD /* Info.plist */,
@@ -145,11 +154,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0432A5E1CEB57A200C260BD /* EditViewController.swift in Sources */,
+				B0685DBA1CEEB259000291E3 /* SegueViewController.swift in Sources */,
+				B0685DC21CF2DA6E000291E3 /* InfoView2Controller.swift in Sources */,
 				B0432A5A1CEB578100C260BD /* FirstViewController.swift in Sources */,
+				B0685DC01CEEE481000291E3 /* MoneyViewController.swift in Sources */,
 				B0432A4A1CEB55FE00C260BD /* ViewController.swift in Sources */,
 				B0432A5C1CEB579000C260BD /* InfoViewController.swift in Sources */,
 				B0432A481CEB55FE00C260BD /* AppDelegate.swift in Sources */,
+				B0685DBE1CEEE0C1000291E3 /* RabbitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

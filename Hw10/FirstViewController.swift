@@ -9,33 +9,89 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
+    var updateDic:[String:String] = [:]
+        
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        let category = self.updateDic["category"]
+        if let category = category  {
+            switch category {
+            case "girl1":
+                self.avBut.setTitle(self.updateDic["name"], forState: .Normal)
+            case "girl2":
+                self.tvBut.setTitle(self.updateDic["name"], forState: .Normal)
+            case "girl3":
+                self.movieBut.setTitle(self.updateDic["name"], forState: .Normal)
+            default:
+                break
+            }
+        }
+    }
+    
 
- 
+        
+    
+    @IBAction func showSleepRabbit(sender: AnyObject) {
+        
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("RabbitController")
+        self.presentViewController(controller!, animated: true, completion: nil)
+        
+        
+    }
+    
+
+    @IBAction func showMoney(sender: AnyObject) {
+    
+        self.performSegueWithIdentifier("showmoney", sender: nil)
+    }
     
     
-
+    @IBOutlet weak var avBut: UIButton!
+    
+    @IBOutlet weak var tvBut: UIButton!
+    
+    @IBOutlet weak var movieBut: UIButton!
+    
+    
     
     @IBAction func avBut(sender: AnyObject) {
-    let controller = self.storyboard?.instantiateViewControllerWithIdentifier("InfoViewControllerIdentity") as! InfoViewController
+    let controller = self.storyboard?.instantiateViewControllerWithIdentifier("InfoView2") as! InfoView2Controller
         controller.girlType = .GirlJapan
+        
+        let but = sender as! UIButton
+        controller.name = but.currentTitle
+        
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
     
     @IBAction func tvBut(sender: AnyObject) {
-    let controller = self.storyboard?.instantiateViewControllerWithIdentifier("InfoViewControllerIdentity") as! InfoViewController
+    let controller = self.storyboard?.instantiateViewControllerWithIdentifier("InfoView2") as! InfoView2Controller
         controller.girlType = .GirlChina
+        let but = sender as! UIButton
+        controller.name = but.currentTitle
+        
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
+  
     
     @IBAction func movieBut(sender: AnyObject) {
-    let controller = self.storyboard?.instantiateViewControllerWithIdentifier("InfoViewControllerIdentity") as! InfoViewController
+    let controller = self.storyboard?.instantiateViewControllerWithIdentifier("InfoView2") as! InfoView2Controller
         controller.girlType = .GirlUSA
+        
+        let but = sender as! UIButton
+        controller.name = but.currentTitle
+        
         self.presentViewController(controller, animated: true, completion: nil)
     }
-    
 
+    
+    
+    
     
     
     override func viewDidLoad() {

@@ -1,64 +1,55 @@
 //
-//  InfoViewController.swift
+//  InfoView2Controller.swift
 //  Hw10
 //
-//  Created by Steven Wang on 2016/5/17.
+//  Created by Steven Wang on 2016/5/23.
 //  Copyright © 2016年 ka666wang. All rights reserved.
 //
 
 import UIKit
 
+class InfoView2Controller: UIViewController {
 
-enum GirlType {
-    case GirlJapan, GirlChina, GirlUSA
-}
-
-
-
-
-class InfoViewController: UIViewController {
-    
-    
-    
     var girlType:GirlType!
     
     var name:String!
     
-    @IBOutlet weak var textField: UITextField!
+
+    
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var textField: UITextField!
+    
     @IBAction func backBut(sender: AnyObject) {
         
-        let controller = self.presentingViewController as! SegueViewController
+        
+        let controller = self.presentingViewController as! FirstViewController
         switch self.girlType! {
         case .GirlJapan:
             controller.updateDic = ["category":"girl1",
                                     "name":self.textField.text!]
-            print("/(self.textField.text!)")
         case .GirlChina:
             controller.updateDic = ["category":"girl2",
                                     "name":self.textField.text!]
-            print("/(self.textField.text!)")
         case .GirlUSA:
             controller.updateDic = ["category":"girl3",
                                     "name":self.textField.text!]
-            print("/(self.textField.text!)")
         }
-          
-        self.dismissViewControllerAnimated(true, completion: nil)
-        
+    
+         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-  
     
- 
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
+        
+        
         switch self.girlType! {
             
         case .GirlJapan:
@@ -72,7 +63,7 @@ class InfoViewController: UIViewController {
         
         
         self.textField.text = self.name
-        
+
         
     }
 
